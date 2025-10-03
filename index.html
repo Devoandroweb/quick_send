@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=auto, initial-scale=1.0">
+    <title>QUICK SAND</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="font.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#43A164',   // hijau
+                        secondary: '#FCB833', // kuning
+                        accent: '#F59E0B',    // oranye
+                        danger: '#DC2626',    // merah
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <!-- NAVBAR -->
+    <section class="min-h-screen" style="
+        background-image: url('img/bg-hero.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        ">
+        <nav class="bg-transparent p-4">
+            <div class="container m-auto">
+                <div class="flex justify-between items-center">
+                    <a href="#">
+                        <img src="img/logo-white.png" class="w-[245px]" alt="">
+                    </a>
+                    <div class="space-x-12">
+                        <a href="#" class="nav-link text-white hover:text-secondary">Home</a>
+                        <a href="#" class="nav-link text-white hover:text-secondary">Money Transfer</a>
+                        <a href="#" class="nav-link text-white hover:text-secondary">Airtime/Data Top Up</a>
+                        <a href="#" class="nav-link text-white hover:text-secondary">Utility Connection</a>
+                    </div>
+                    <div class="hidden md:flex space-x-4">
+                        <a href="#"
+                            class="px-10 py-2 border border-white text-white lato-bold rounded-full hover:bg-white hover:text-green-600 transition">
+                            Login
+                        </a>
+
+                        <!-- Tombol SignUp -->
+                        <a href="#"
+                            class="px-10 py-2 bg-yellow-500 text-white lato-bold rounded-full hover:bg-yellow-600 transition">
+                            SignUp
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!-- HERO SECTION -->
+        <div class="container m-auto mt-20">
+            <div class="flex">
+                <div class="w-full md:w-1/2">
+                    <h1 class="text-[52px] text-white mb-6 lato-extrabold leading-[62px]">The Secure <br> easiest and
+                        fastest <br> way to transfer money</h1>
+                    <p class="text-white text-[18px] mb-[4rem] leading-[28px] lato-regular">Send and receive money to
+                        your loved ones in minust with great <br> rates and low fees. Over 180 countries and 30
+                        currencies <br> supported.</p>
+                    <a href="#"
+                        class="px-[3rem] mb-[4rem] inline-block py-5 bg-yellow-500 text-white lato-bold rounded-full hover:bg-yellow-600 transition">
+                        See More Details
+                    </a>
+                    <img src="img/asic-logo-mobile.png" class="w-[50%]" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
