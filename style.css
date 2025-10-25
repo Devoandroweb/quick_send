@@ -1,3 +1,9 @@
+:root{
+    --primary: #43A164;
+    --secondary: #FCB833;
+    --gray: #505050;
+    --dark: #08110B;
+}
 *{
     padding: 0;
 }
@@ -24,4 +30,12 @@
 }
 .secondary{
     background-color: #F5F5F5;
+}
+.btn-primary{
+    background-color: var(--primary);
+    color: white;
+}
+.btn-primary:hover{
+    background-color: #36974E;
+    color: white;
 }
