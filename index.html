@@ -15,7 +15,9 @@
     <link rel="stylesheet" href="font.css">
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script>
         tailwind.config = {
             theme: {
@@ -34,207 +36,325 @@
 
 <body>
     <!-- NAVBAR -->
-    <section class="min-h-screen" style="
-        background-image: url('img/bg-hero.png');
-        background-repeat: no-repeat;
-        background-size: cover;
-        ">
-        <nav class="bg-transparent hidden md:block p-4">
-            <div class="container m-auto">
-                <div class="flex justify-between items-center">
-                    <a href="#">
-                        <img src="img/logo-white.png" class="w-[245px]" alt="">
-                    </a>
-                    <div class="space-x-12">
-                        <a href="#" class="nav-link text-white hover:text-secondary">Home</a>
-                        <a href="#" class="nav-link text-white hover:text-secondary">Money Transfer</a>
-                        <a href="#" class="nav-link text-white hover:text-secondary">Airtime/Data Top Up</a>
-                        <a href="#" class="nav-link text-white hover:text-secondary">Utility Connection</a>
-                    </div>
-                    <div class="hidden md:flex space-x-4">
-                        <a href="#"
-                            class="px-10 py-2 border border-white text-white lato-bold rounded-full hover:bg-white hover:text-green-600 transition">
-                            Login
+    <section class="min-h-screen">
+        <img src="img/bg-hero.png" class="w-100" alt="">
+        <div class="absolute z-1 top-0 left-0 right-0">
+            <nav class="bg-transparent hidden md:block p-4 z-1">
+                <div class="container m-auto">
+                    <div class="flex justify-between items-center">
+                        <a href="#">
+                            <img src="img/logo-white.png" class="w-[245px]" alt="">
                         </a>
+                        <div class="space-x-12">
+                            <a href="#" class="nav-link text-white hover:text-secondary">Home</a>
+                            <a href="#" class="nav-link text-white hover:text-secondary">Money Transfer</a>
+                            <a href="#" class="nav-link text-white hover:text-secondary">Airtime/Data Top Up</a>
+                            <a href="#" class="nav-link text-white hover:text-secondary">Utility Connection</a>
+                        </div>
+                        <div class="hidden md:flex space-x-4">
+                            <a href="#"
+                                class="px-10 py-2 border border-white text-white lato-bold rounded-full hover:bg-white hover:text-green-600 transition">
+                                Login
+                            </a>
 
-                        <!-- Tombol SignUp -->
-                        <a href="#"
-                            class="px-10 py-2 bg-yellow-500 text-white lato-bold rounded-full hover:bg-yellow-600 transition">
-                            SignUp
-                        </a>
+                            <!-- Tombol SignUp -->
+                            <a href="#"
+                                class="px-10 py-2 bg-yellow-500 text-white lato-bold rounded-full hover:bg-yellow-600 transition">
+                                SignUp
+                            </a>
+                        </div>
                     </div>
                 </div>
-            </div> 
-        </nav>
-        <nav class="bg-transparent md:hidden p-4">
-            <div class="container mx-auto px-2 lg:px-4 py-1 lg:py-3">
-                <div class="flex justify-between items-center">
-                    <!-- Logo -->
-                    <a href="#">
-                        <img src="img/logo-white.png" class="w-[180px] md:w-[245px]" alt="Logo">
-                    </a>
-            
-                    <!-- Tombol Hamburger / X (Mobile) -->
-                    <button id="menu-btn" class="md:hidden text-white focus:outline-none">
-                        <!-- Icon Hamburger -->
-                        <svg id="icon-hamburger" xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 block" fill="none"
-                            viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m0 6H4" />
-                        </svg>
-            
-                        <!-- Icon X -->
-                        <svg id="icon-close" xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 hidden" fill="none"
-                            viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-                        </svg>
-                    </button>
-            
-                    <!-- Menu Utama (Desktop) -->
-                    <div class="hidden md:flex items-center space-x-10">
+            </nav>
+            <nav class="bg-transparent md:hidden p-4 z-1 relative">
+                <div class="container mx-auto px-2 lg:px-4 py-1 lg:py-3">
+                    <div class="flex justify-between items-center">
+                        <!-- Logo -->
+                        <a href="#">
+                            <img src="img/logo-white.png" class="w-[180px] md:w-[245px]" alt="Logo">
+                        </a>
+
+                        <!-- Tombol Hamburger / X (Mobile) -->
+                        <button id="menu-btn" class="md:hidden text-white focus:outline-none">
+                            <!-- Icon Hamburger -->
+                            <svg id="icon-hamburger" xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 block"
+                                fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h16m0 6H4" />
+                            </svg>
+
+                            <!-- Icon X -->
+                            <svg id="icon-close" xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 hidden" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M6 18L18 6M6 6l12 12" />
+                            </svg>
+                        </button>
+
+                        <!-- Menu Utama (Desktop) -->
+                        <div class="hidden md:flex items-center space-x-10">
+                            <a href="#" class="text-white hover:text-yellow-400 transition">Home</a>
+                            <a href="#" class="text-white hover:text-yellow-400 transition">Money Transfer</a>
+                            <a href="#" class="text-white hover:text-yellow-400 transition">Airtime/Data Top Up</a>
+                            <a href="#" class="text-white hover:text-yellow-400 transition">Utility Connection</a>
+                        </div>
+
+                        <!-- Tombol Login & Signup (Desktop) -->
+                        <div class="hidden md:flex space-x-4">
+                            <a href="#"
+                                class="px-6 py-2 border border-white text-white rounded-full hover:bg-white hover:text-green-700 transition">
+                                Login
+                            </a>
+                            <a href="#"
+                                class="px-6 py-2 bg-yellow-500 text-white rounded-full hover:bg-yellow-600 transition">
+                                SignUp
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Menu Mobile -->
+                    <div id="mobile-menu" class="hidden mt-4 flex flex-col space-y-3 md:hidden">
                         <a href="#" class="text-white hover:text-yellow-400 transition">Home</a>
                         <a href="#" class="text-white hover:text-yellow-400 transition">Money Transfer</a>
                         <a href="#" class="text-white hover:text-yellow-400 transition">Airtime/Data Top Up</a>
                         <a href="#" class="text-white hover:text-yellow-400 transition">Utility Connection</a>
-                    </div>
-            
-                    <!-- Tombol Login & Signup (Desktop) -->
-                    <div class="hidden md:flex space-x-4">
-                        <a href="#"
-                            class="px-6 py-2 border border-white text-white rounded-full hover:bg-white hover:text-green-700 transition">
-                            Login
-                        </a>
-                        <a href="#" class="px-6 py-2 bg-yellow-500 text-white rounded-full hover:bg-yellow-600 transition">
-                            SignUp
-                        </a>
+
+                        <div class="pt-3 border-t border-white/40 flex flex-col space-y-2">
+                            <a href="#"
+                                class="px-6 py-2 border border-white text-white rounded-full hover:bg-white hover:text-green-700 transition text-center">
+                                Login
+                            </a>
+                            <a href="#"
+                                class="px-6 py-2 bg-yellow-500 text-white rounded-full hover:bg-yellow-600 transition text-center">
+                                SignUp
+                            </a>
+                        </div>
                     </div>
                 </div>
-            
-                <!-- Menu Mobile -->
-                <div id="mobile-menu" class="hidden mt-4 flex flex-col space-y-3 md:hidden">
-                    <a href="#" class="text-white hover:text-yellow-400 transition">Home</a>
-                    <a href="#" class="text-white hover:text-yellow-400 transition">Money Transfer</a>
-                    <a href="#" class="text-white hover:text-yellow-400 transition">Airtime/Data Top Up</a>
-                    <a href="#" class="text-white hover:text-yellow-400 transition">Utility Connection</a>
-            
-                    <div class="pt-3 border-t border-white/40 flex flex-col space-y-2">
+            </nav>
+            <!-- HERO SECTION -->
+            <div class="container m-auto mt-20 z-1 relative">
+                <div class="flex">
+                    <div class="w-full md:w-3/5">
+                        <h1 class="text-[52px] text-white mb-6 lato-extrabold leading-[62px]">The Secure <br> easiest
+                            and
+                            fastest <br> way to transfer money</h1>
+                        <p class="text-white text-[18px] mb-[4rem] leading-[28px] lato-regular">Send and receive money
+                            to
+                            your loved ones in minust with great <br> rates and low fees. Over 180 countries and 30
+                            currencies <br> supported.</p>
                         <a href="#"
-                            class="px-6 py-2 border border-white text-white rounded-full hover:bg-white hover:text-green-700 transition text-center">
-                            Login
+                            class="px-[3rem] mb-[4rem] inline-block py-5 bg-yellow-500 text-white lato-bold rounded-full hover:bg-yellow-600 transition">
+                            See More Details
                         </a>
-                        <a href="#"
-                            class="px-6 py-2 bg-yellow-500 text-white rounded-full hover:bg-yellow-600 transition text-center">
-                            SignUp
-                        </a>
+                        <img src="img/asic-logo-mobile.png" class="w-[50%]" alt="">
+                    </div>
+                    <div class="hidden md:block w-2/5">
+                        <div class="bg-white shadow rounded-[32px] text-lg p-7 ">
+                            <div
+                                class="flex m-auto text-sm lato-bold bg-slate-100 w-max max-w-full rounded-full p-2 text-center mb-[2.5rem]">
+                                <span class="py-2 px-[3rem] bg-[var(--secondary)] rounded-full text-white">Send
+                                    Money</span>
+                                <span class="py-2 px-[3rem] ">Send Airtime/Data</span>
+                            </div>
+                            <label class="lato-regular text-sm mb-2 text-[var(--gray)]" for="">You send</label>
+                            <div class="rounded-full border flex align-center overflow-hidden mb-3">
+                                <input type="text" name="" id=""
+                                    class="w-[75%] px-4 py-4 text-lg lato-bold rounded-l-full" value="1000">
+                                <div class="bg-[var(--primary)] w-[25%] text-white flex items-center gap-2 px-4 py-2">
+                                    <span class="flex items-center gap-1">
+                                        <img class="w-[24px] h-[24px]" src="img/australia.png" alt="">
+                                        USD
+                                    </span>
+                                    <div class="icon text-black ms-auto"><i class="fa-solid fa-caret-down"></i></div>
+                                </div>
+                            </div>
+                            <label class="lato-regular text-sm mb-2 text-[var(--gray)]" for="">Recipient gets</label>
+                            <div class="rounded-full border flex align-center overflow-hidden">
+                                <input type="text" name="" id=""
+                                    class="w-[75%] px-4 py-4 text-lg lato-bold rounded-l-full" value="10,561915.36">
+                                <div class="bg-[var(--primary)] w-[25%] text-white flex items-center gap-2 px-4 py-2">
+                                    <span class="flex items-center gap-1">
+                                        <img class="w-[24px] h-[24px]" src="img/indonesia.png" alt="">
+                                        IDR
+                                    </span>
+                                    <div class="icon text-black ms-auto"><i class="fa-solid fa-caret-down"></i></div>
+                                </div>
+                            </div>
+
+                            <div
+                                class="bg-[#D6F5E1] border-[var(--primary)] text-[var(--primary)] border mt-3 mb-7 px-4 py-2 rounded-full lato-bold text-sm">
+                                Rate: 1 AUD = 10,480 IDR
+                            </div>
+                            <div class="flex mb-1">
+                                <div class="w-1/2 text-[var(--gray)] text-sm lato-regular">
+                                    Delivery Method :
+                                </div>
+                                <div class="flex gap-1 w-1/2 text-end text-[var(--dark)] text-sm lato-regular">
+                                    <div class="ms-auto">
+                                        Direct Bank Deposit <i class="fa-solid fa-caret-down"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex mb-[4.5rem]">
+                                <div class="w-1/2 text-[var(--gray)] text-sm lato-regular">
+                                    Delivery Time :
+                                </div>
+                                <div class="w-1/2 text-end text-[var(--gray)] text-xs lato-bold">
+                                    2 - 3 Days
+                                </div>
+                            </div>
+                            <div class="flex mb-1">
+                                <div class="w-1/2 text-[var(--gray)] text-sm lato-regular">
+                                    Pay us with :
+                                </div>
+                                <div class="flex gap-1 w-1/2 text-end text-[var(--dark)] text-sm lato-regular">
+                                    <div class="ms-auto">
+                                        Bank Transfer <i class="fa-solid fa-caret-down"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex mb-[3rem]">
+                                <div class="w-full text-end text-sm lato-regular">
+                                    <div class="text-[var(--secondary)]">
+                                        1.95 AUD
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex mb-1">
+                                <div class="w-1/2 text-[var(--gray)] text-sm lato-regular">
+                                    Free :
+                                </div>
+                                <div class="flex gap-1 w-1/2 text-end text-[var(--dark)] text-sm lato-regular">
+                                    <div class="ms-auto text-[#D95858] lato-bold text-sm">
+                                        - 26.63 AUD
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex mb-1">
+                                <div class="w-1/2 text-[var(--gray)] text-sm lato-regular">
+                                    Total to Pay :
+                                </div>
+                                <div class="flex gap-1 w-1/2 text-end text-[var(--dark)] text-sm lato-regular">
+                                    <div class="ms-auto text-[var(--dark)] lato-bold text-sm">
+                                        1260.63 AUD
+                                    </div>
+                                </div>
+                            </div>
+                            <hr class="mb-3">
+                            <a href=""
+                                class="btn-primary px-4 py-2 w-full inline-block text-center rounded-full lato-bold text-base">Start
+                                Converting</a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </nav>
-        <!-- HERO SECTION -->
-        <div class="container m-auto mt-20">
-            <div class="flex">
-                <div class="w-full md:w-3/5">
-                    <h1 class="text-[52px] text-white mb-6 lato-extrabold leading-[62px]">The Secure <br> easiest and
-                        fastest <br> way to transfer money</h1>
-                    <p class="text-white text-[18px] mb-[4rem] leading-[28px] lato-regular">Send and receive money to
-                        your loved ones in minust with great <br> rates and low fees. Over 180 countries and 30
-                        currencies <br> supported.</p>
-                    <a href="#"
-                        class="px-[3rem] mb-[4rem] inline-block py-5 bg-yellow-500 text-white lato-bold rounded-full hover:bg-yellow-600 transition">
-                        See More Details
-                    </a>
-                    <img src="img/asic-logo-mobile.png" class="w-[50%]" alt="">
+        </div>
+    </section>
+    <section class="container me-0 m-auto mt-20 mb-20 relative z-2 flex gap-10 align-center">
+        <div class="w-4/5 py-6">
+            <h1 class="text-3xl font-bold mb-4 ">Why Choose Us?</h1>
+            <div class="w-20 rounded h-[7px] bg-[var(--primary)] mb-2"></div>
+            <p class="text-[var(--gray)] mb-[3rem]">Because we can offer various advantages in sending and receiving
+                money in various countries in a simple, safe and secure way. lowest cost and affordable.</p>
+            <div class="grid grid-flow-col grid-rows-2 gap-6">
+                <div class="grid gap-3 mb-[3rem]">
+                    <img src="img/icon-like.png" alt="">
+                    <h4 class="lato-bold">Simple To Use</h4>
+                    <p class="text-[var(--gray)] lato-regular w-[85%]">Send and receive money. store cards. link bank
+                        accounts and pay conveniently anytime and anywhere with your email address and password.</p>
                 </div>
-                <div class="hidden md:block w-2/5">
-                    <div class="bg-white shadow rounded-[32px] text-lg p-7 ">
-                        <div class="flex m-auto text-sm lato-bold bg-slate-100 w-max max-w-full rounded-full p-2 text-center mb-[2.5rem]">
-                            <span class="py-2 px-[3rem] bg-[var(--secondary)] rounded-full text-white">Send Money</span>
-                            <span class="py-2 px-[3rem] ">Send Airtime/Data</span>
-                        </div>
-                        <label class="lato-regular text-sm mb-2 text-[var(--gray)]" for="">You send</label>
-                        <div class="rounded-full border flex align-center overflow-hidden mb-3">
-                            <input type="text" name="" id="" class="w-[75%] px-4 py-4 text-lg lato-bold rounded-l-full" value="1000">
-                            <div class="bg-[var(--primary)] w-[25%] text-white flex items-center gap-2 px-4 py-2">
-                                <span class="flex items-center gap-1">
-                                    <img class="w-[24px] h-[24px]" src="img/australia.png" alt="">
-                                    USD
-                                </span>
-                                <div class="icon text-black ms-auto" ><i class="fa-solid fa-caret-down"></i></div>
-                            </div>
-                        </div>
-                        <label class="lato-regular text-sm mb-2 text-[var(--gray)]" for="">Recipient gets</label>
-                        <div class="rounded-full border flex align-center overflow-hidden">
-                            <input type="text" name="" id="" class="w-[75%] px-4 py-4 text-lg lato-bold rounded-l-full" value="10,561915.36">
-                            <div class="bg-[var(--primary)] w-[25%] text-white flex items-center gap-2 px-4 py-2">
-                                <span class="flex items-center gap-1">
-                                    <img  class="w-[24px] h-[24px]" src="img/indonesia.png" alt="">
-                                    IDR
-                                </span>
-                                <div class="icon text-black ms-auto"><i class="fa-solid fa-caret-down"></i></div>
-                            </div>
-                        </div>
-
-                        <div class="bg-[#D6F5E1] border-[var(--primary)] text-[var(--primary)] border mt-3 mb-7 px-4 py-2 rounded-full lato-bold text-sm">
-                            Rate: 1 AUD = 10,480 IDR
-                        </div>
-                        <div class="flex mb-1">
-                            <div class="w-1/2 text-[var(--gray)] text-sm lato-regular">
-                                Delivery Method :
-                            </div>
-                            <div class="flex gap-1 w-1/2 text-end text-[var(--dark)] text-sm lato-regular">
-                                <div class="ms-auto">
-                                    Direct Bank Deposit <i class="fa-solid fa-caret-down"></i>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="flex mb-[4.5rem]">
-                            <div class="w-1/2 text-[var(--gray)] text-sm lato-regular">
-                                Delivery Time :
-                            </div>
-                            <div class="w-1/2 text-end text-[var(--gray)] text-xs lato-bold">
-                                2 - 3 Days
-                            </div>
-                        </div>
-                        <div class="flex mb-1">
-                            <div class="w-1/2 text-[var(--gray)] text-sm lato-regular">
-                                Pay us with :
-                            </div>
-                            <div class="flex gap-1 w-1/2 text-end text-[var(--dark)] text-sm lato-regular">
-                                <div class="ms-auto">
-                                    Bank Transfer <i class="fa-solid fa-caret-down"></i>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="flex mb-[3rem]">
-                            <div class="w-full text-end text-sm lato-regular">
-                                <div class="text-[var(--secondary)]">
-                                    1.95 AUD
-                                </div>
-                            </div>
-                        </div>
-                        <div class="flex mb-1">
-                            <div class="w-1/2 text-[var(--gray)] text-sm lato-regular">
-                                Free :
-                            </div>
-                            <div class="flex gap-1 w-1/2 text-end text-[var(--dark)] text-sm lato-regular">
-                                <div class="ms-auto text-[#D95858] lato-bold text-sm">
-                                    - 26.63 AUD
-                                </div>
-                            </div>
-                        </div>
-                        <div class="flex mb-1">
-                            <div class="w-1/2 text-[var(--gray)] text-sm lato-regular">
-                                Total to Pay :
-                            </div>
-                            <div class="flex gap-1 w-1/2 text-end text-[var(--dark)] text-sm lato-regular">
-                                <div class="ms-auto text-[var(--dark)] lato-bold text-sm">
-                                    1260.63 AUD
-                                </div>
-                            </div>
-                        </div>
-                        <hr class="mb-3">
-                        <a href="" class="btn-primary px-4 py-2 w-full inline-block text-center rounded-full lato-bold text-base">Start Converting</a>
+                <div class="grid gap-3 mb-[3rem]">
+                    <img src="img/icon-money.png" alt="">
+                    <h4 class="lato-bold">Low Fees</h4>
+                    <p class="text-[var(--gray)] lato-regular w-[85%]">It's easy for Skrill wallet holders to send and
+                        receive money — you just need an email address.</p>
+                </div>
+                <div class="grid gap-3 mb-[3rem]">
+                    <img src="img/icon-thunder.png" alt="">
+                    <h4 class="lato-bold">Faster Payment</h4>
+                    <p class="text-[var(--gray)] lato-regular w-[85%]">Your security is a priority. We always keep your
+                        payments and personal information safe, and our anti-fraud team protects every transaction.</p>
+                </div>
+                <div class="grid gap-3 mb-[3rem]">
+                    <img src="img/icon-home.png" alt="">
+                    <h4 class="lato-bold">100% Secure</h4>
+                    <p class="text-[var(--gray)] lato-regular w-[85%]">Lorem ipsum dolor sit amet, consectetur
+                        adipiscing elit. Laoreet quis sit blandit enim aliquam sed magna risus mattis.</p>
+                </div>
+            </div>
+        </div>
+        <div class="w-1/5">
+            <img class="ms-auto" src="img/decoration.png" alt="">
+        </div>
+    </section>
+    <section class="container m-auto mt-20 mb-20 relative z-2">
+        <div class="rounded rounded-[32px] bg-[var(--primary-light)] p-10">
+            <div class="text-center">
+                <h1 class="text-2xl lato-bold mb-4">How We Deliver Funds to Your Receiver?</h1>
+                <div class="w-20 rounded h-[7px] bg-[var(--primary)] mb-6 mx-auto"></div>
+                <p class="text-[var(--gray)] lato-regular mb-7">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Laoreet quis sit blandit enim aliquam sed magna risus mattis.</p>
+                <div class="grid grid-cols-4 gap-5">
+                    <div class="flex flex-col justify-between h-full text-center p-4">
+                        <img class="m-auto mb-6" src="img/banking.png" alt="">
+                        <h4 class="lato-bold mt-4 mb-6">Banking</h4>
+                        <p class="text-[var(--gray)] lato-regular mb-6 flex-grow">Send a secure bank transfer directly
+                            to hundreds of major banks worldwide.</p>
+                        <a class="text-primary" href="#">Learn More</a>
+                    </div>
+                    <div class="flex flex-col justify-between h-full text-center p-4">
+                        <img class="m-auto mb-6" src="img/cash-pickup.png" alt="">
+                        <h4 class="lato-bold mt-4 mb-6">Cash Pickup</h4>
+                        <p class="text-[var(--gray)] lato-regular mb-6 flex-grow">Cash is available to collect within
+                            minutes from many locations across the country.</p>
+                        <a class="text-primary" href="#">Learn More</a>
+                    </div>
+                    <div class="flex flex-col justify-between h-full text-center p-4">
+                        <img class="m-auto mb-6" src="img/transfer.png" alt="">
+                        <h4 class="lato-bold mt-4 mb-6">Mobile Money</h4>
+                        <p class="text-[var(--gray)] lato-regular mb-6 flex-grow">Send directly to mobile money accounts
+                            across the globe, within minutes.</p>
+                        <a class="text-primary" href="#">Learn More</a>
+                    </div>
+                    <div class="flex flex-col justify-between h-full text-center p-4">
+                        <img class="m-auto mb-6" src="img/money-transaction.png" alt="">
+                        <h4 class="lato-bold mt-4 mb-6">Mobile Top Up</h4>
+                        <p class="text-[var(--gray)] lato-regular mb-6 flex-grow">Recharge via Mobile directly. No need
+                            to queue for a long time.</p>
+                        <a class="text-primary" href="#">Learn More</a>
                     </div>
                 </div>
+            </div>
+        </div>
+
+    </section>
+    <section class="container m-auto mt-20 mb-20 relative z-2">
+        <div class="">
+            <h1 class="text-2xl lato-bold mb-4 text-center">How Does it Work?</h1>
+            <div class="w-20 rounded h-[7px] bg-[var(--primary)] mb-6 mx-auto"></div>
+            <div class="grid grid-cols-3 gap-[12rem] mb-8">
+                <div>
+                    <img src="img/create-account.png" alt="">
+                    <h4 class="lato-bold mt-3 mb-3">Create Account</h4>
+                    <p class="text-[var(--gray)] lato-regular">It takes just a few minutes to create a Skrill
+                        wallet and bring all your payment details together in one place. All 40 country</p>
+                </div>
+                <div>
+                    <img src="img/make-payment.png" alt="">
+                    <h4 class="lato-bold mt-3 mb-3">Make Payment</h4>
+                    <p class="text-[var(--gray)] lato-regular">Stay in control with simple. secure and quick
+                        payment methods, including stored cards and your account balance.</p>
+                </div>
+                <div>
+                    <img src="img/withdraw.png" alt="">
+                    <h4 class="lato-bold mt-3 mb-3">Withdraw Funds</h4>
+                    <p class="text-[var(--gray)] lato-regular">Move funds - including winnings - from Skrill to
+                        your bank account instantly or make ATM withdrawals.</p>
+                </div>
+            </div>
+            <div class="text-center">
+                <a href="" class="btn-primary px-8 py-3 inline-block text-center rounded-full lato-bold text-base">Open a Free Account</a>
             </div>
         </div>
     </section>

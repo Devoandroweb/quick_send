@@ -3,6 +3,7 @@
     --secondary: #FCB833;
     --gray: #505050;
     --dark: #08110B;
+    --primary-light:#ECF6F0;
 }
 *{
     padding: 0;
@@ -38,4 +39,7 @@
 .btn-primary:hover{
     background-color: #36974E;
     color: white;
+}
+.text-primary{
+    color: var(--primary);
 }
