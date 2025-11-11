@@ -43,3 +43,6 @@
 .text-primary{
     color: var(--primary);
 }
+.bg-primary{
+    background-color: var(--primary);
+}
